@@ -1,0 +1,10 @@
+<ul>
+    <li [style.background-color]="getColor(hue)" *ngFor="let hue of hues"></li>
+</ul>
+
+<input type="range" [(ngModel)]="hue" min="0" max="360" step="1">
+<input type="range" [(ngModel)]="saturation" min="0" max="100" step="1">
+<input type="range" [(ngModel)]="lightness" min="0" max="100" step="1">
+
+<div class="color" [style.background-color]="getSelectedColor()"></div>
+<p>hsl ({{ hue }}, {{ saturation }}%, {{ lightness }}%)</p>
